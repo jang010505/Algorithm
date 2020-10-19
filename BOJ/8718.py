@@ -1,0 +1,5 @@
+a, b=map(int, input().split())
+if a>=7*b: print(7000*b)
+elif 2*a>=7*b: print(3500*b)
+elif 4*a>=7*b: print(1750*b)
+else: print(0)
