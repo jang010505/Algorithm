@@ -1,0 +1,5 @@
+x=int(input())
+if x==1: print(1)
+if x==2: print(7)
+if x==3: print(2)
+if x==4: print(3)
