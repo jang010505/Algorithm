@@ -1,0 +1,6 @@
+x2, y2=map(int, input().split())
+x1, y1=map(int, input().split())
+x3, y3=map(int, input().split())
+if abs(x3-x1)+abs(y3-y1)<max(abs(x3-x2), abs(y3-y2)): print("daisy")
+elif abs(x3-x1)+abs(y3-y1)==max(abs(x3-x2), abs(y3-y2)): print("tie")
+else: print("bessie")
