@@ -1,0 +1,35 @@
+import sys
+from collections import deque
+m, n=map(int, input().split())
+x, q=[], deque()
+for i in range(n):
+    x.append(list(map(int, sys.stdin.readline().split())))
+    for j in range(m):
+        if x[i][j]==1:
+            q.append([i, j])
+cost=-1
+while q:
+    cost+=1
+    for _ in range(len(q)): 
+        q_pop=q.popleft()
+        i=q_pop[0]
+        j=q_pop[1]
+        if i-1>=0 and x[i-1][j]==0:
+            q.append([i-1, j])
+            x[i-1][j]=1
+        if j-1>=0 and x[i][j-1]==0:
+            q.append([i, j-1])
+            x[i][j-1]=1
+        if i+1<n and x[i+1][j]==0:
+            q.append([i+1, j])
+            x[i+1][j]=1
+        if j+1<m and x[i][j+1]==0:
+            q.append([i, j+1])
+            x[i][j+1]=1
+chk=True
+for i in x:
+    if 0 in i:
+        chk=False
+        break
+if chk: print(cost)
+else: print(-1)
