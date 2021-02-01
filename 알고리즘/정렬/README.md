@@ -25,6 +25,6 @@
 |Heap|O(Nlog<sub>2</sub>N)|O(Nlog<sub>2</sub>N)|O(Nlog<sub>2</sub>N)|
 |Merge|O(Nlog<sub>2</sub>N)|O(Nlog<sub>2</sub>N)|O(Nlog<sub>2</sub>N)|
 |Insetion|O(N<sup>2</sup>)|O(N<sup>2</sup>)|O(N)|
-|Shell|O(N<sup>2</sup>)|O(N<sup>1.3,1.5</sup>)|O(N)|
+|Shell|O(N<sup>2</sup>)|O(N<sup>1.5</sup>)|O(N)|
 |Radix|O(N)|O(N)|O(N)|
 |Counting|O(N)|O(N)|O(N)|
