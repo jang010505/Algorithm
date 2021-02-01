@@ -1,45 +1,56 @@
 #include <stdio.h>
-int n, d[1000], res[1000];
-void g(int a[], int m, int mid, int N){
-	int i=m, j=mid+1, k=m;
-	while(i<=mid && j<=N){
-		if(a[i]<=a[j]){
-			res[k]=a[i];
+
+void mergeSort(int d[], int result[], int left, int mid, int right){
+	int i=left, j=mid+1, k=left;
+	while(i<=mid && j<=right){
+		if(d[i]<=d[j]){
+			result[k]=d[i];
 			i++;
 		}
 		else{
-			res[k]=a[j];
+			result[k]=d[j];
 			j++;
 		}
 		k++;
 	}
 	if(i>mid){
-		while(j<=N){
-			res[k]=a[j];
+		while(j<=right){
+			result[k]=d[j];
 			k++;
 			j++;
 		}
 	}
 	else{
 		while(i<=mid){
-			res[k]=a[i];
+			result[k]=d[i];
 			k++;
 			i++;
 		}
 	}
-	for(int t=m;t<=N;t++) a[t]=res[t];
+	for(int t=left;t<=right;t++)
+		d[t]=result[t];
+	return;
 }
-void f(int a[], int N, int m){
-	if(N<m){
-		int mid=(N+m)/2;
-		f(a, N, mid);
-		f(a, mid+1, m);
-		g(a, N, mid, m);
+void merge(int d[], int result[], int left, int right){
+	if(left<right){
+		int mid=(left+right)/2;
+		merge(d, result, left, mid);
+		merge(d, result, mid+1, right);
+		mergeSort(d, result, left, mid, right);
 	}
+	return;
+}
+void print(int result[], int n){
+	for(int i=0;i<n;i++)
+		printf("%d ", result[i]);
+	return;
 }
 int main(){
+	int n, d[100001], result[100001];
 	scanf("%d", &n);
-	for(int i=0;i<n;i++) scanf("%d", &d[i]);
-	f(d, 0, n-1);
-	for(int i=0;i<n;i++) printf("%d ", d[i]);
+	for(int i=0;i<n;i++)
+		scanf("%d", &d[i]);
+	merge(d, result, 0, n-1);
+	print(result, n);
+	return 0;
 }
