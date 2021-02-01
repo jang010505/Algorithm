@@ -1,17 +1,27 @@
 #include <stdio.h>
 
-int main(){
-	int n, d[1000], temp;
-	scanf("%d", &n);
-	for(int i=0;i<n;i++) scanf("%d", &d[i]);
-	for(int i=0;i<n;i++){
-		for(int j=i;j<n-1;j++){
+void bubbleSort(int d[], int n){
+	for(int i=0;i<n-1;i++){
+		for(int j=0;j<n-i-1;j++){
 			if(d[j]>d[j+1]){
-				temp=d[j];
+				int temp=d[j];
 				d[j]=d[j+1];
 				d[j+1]=temp;
 			}
 		}
 	}
-	for(int i=0;i<n;i++) printf("%d ", d[i]);
+	return;
+}
+void print(int d[], int n){
+	for(int i=0;i<n;i++)
+		printf("%d ", d[i]);
+}
+int main(){
+	int n, d[100001];
+	scanf("%d", &n);
+	for(int i=0;i<n;i++)
+		scanf("%d", &d[i]);
+	bubbleSort(d, n);
+	print(d, n);
+	return 0;
 }
