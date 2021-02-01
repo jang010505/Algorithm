@@ -1,5 +1,5 @@
 ## 참고한 사이트
-[얍문](https://yabmoons.tistory.com/)님의 블로그를 통해 공부를 하엿습니다.  
+[얍문](https://yabmoons.tistory.com/)님의 블로그를 통해 공부를 하였습니다.  
 감사합니다!
 
 ## 정렬 알고리즘
