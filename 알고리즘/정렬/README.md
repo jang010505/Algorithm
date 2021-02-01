@@ -13,6 +13,9 @@
 8. [기수정렬(RadixSort)](https://yabmoons.tistory.com/248)
 9. [계수정렬(CountingSort)](https://yabmoons.tistory.com/249)
 
+## 장단점
+[장단점](https://yabmoons.tistory.com/250)
+
 ## 시간복잡도
 |Sort|Worst|Average|Best|
 |----|:----:|:----:|:----:|
