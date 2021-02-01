@@ -1,8 +1,6 @@
 #include <stdio.h>
 
-int d[1000001], n;
-
-int partition(int left, int right){
+int partition(int d[], int left, int right){
 	int pivot, temp;
 	int low, high;
 	low=left;
@@ -27,18 +25,25 @@ int partition(int left, int right){
 	d[left]=temp;
 	return high;
 }
-void quick_sort(int left, int right){
+void quickSort(int d[], int left, int right){
 	if(left<right){
-		int q=partition(left, right);
-		quick_sort(left, q - 1);
-		quick_sort(q + 1, right);
+		int q=partition(d, left, right);
+		quickSort(d, left, q-1);
+		quickSort(d, q+1, right);
 	}
+	return;
+}
+void print(int d[], int n){
+	for(int i=0;i<n;i++)
+		printf("%d ", d[i]);
+	return;
 }
 int main(){
+	int d[100001], n;
 	scanf("%d", &n);
 	for(int i=0;i<n;i++)
 		scanf("%d", &d[i]);
-	quick_sort(0, n-1);
-	for(int i=0;i<n;i++)
-		printf("%d\n", d[i]);
+	quickSort(d, 0, n-1);
+	print(d, n);
+	return 0;
 }
