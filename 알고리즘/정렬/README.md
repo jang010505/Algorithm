@@ -15,7 +15,7 @@
 
 ## 시간복잡도
 |Sort|Worst|Average|Best|
-|----|----|----|----|
+|----|:----:|:----:|:----:|
 |Bubble|O(N<sup>2</sup>)|O(N<sup>2</sup>)|O(N<sup>2</sup>)|
 |Selection|O(N<sup>2</sup>)|O(N<sup>2</sup>)|O(N<sup>2</sup>)|
 |Quick|O(N<sup>2</sup>)|O(NlogN)|O(NlogN)|
