@@ -21,9 +21,9 @@
 |----|:----:|:----:|:----:|
 |Bubble|O(N<sup>2</sup>)|O(N<sup>2</sup>)|O(N<sup>2</sup>)|
 |Selection|O(N<sup>2</sup>)|O(N<sup>2</sup>)|O(N<sup>2</sup>)|
-|Quick|O(N<sup>2</sup>)|O(NlogN)|O(NlogN)|
-|Heap|O(NlogN)|O(NlogN)|O(NlogN)|
-|Merge|O(NlogN)|O(NlogN)|O(NlogN)|
+|Quick|O(N<sup>2</sup>)|O(Nlog<sub>2</sub>N)|O(Nlog<sub>2</sub>N)|
+|Heap|O(Nlog<sub>2</sub>N)|O(Nlog<sub>2</sub>N)|O(Nlog<sub>2</sub>N)|
+|Merge|O(Nlog<sub>2</sub>N)|O(Nlog<sub>2</sub>N)|O(Nlog<sub>2</sub>N)|
 |Insetion|O(N<sup>2</sup>)|O(N<sup>2</sup>)|O(N)|
 |Shell|O(N<sup>2</sup>)|O(N<sup>1.3,1.5</sup>)|O(N)|
 |Radix|O(N)|O(N)|O(N)|
