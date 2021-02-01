@@ -1,8 +1,6 @@
 #include <stdio.h>
-int n, d[1000];
-int main(){
-	scanf("%d", &n);
-	for(int i=0;i<n;i++) scanf("%d", &d[i]);
+
+void heapSort(int d[], int n){
 	for(int i=1;i<n;i++){
 		int c=i;
 		do{
@@ -30,5 +28,19 @@ int main(){
 			r=c;
 		}while(c<i);
 	}
-	for(int i=0;i<n;i++) printf("%d ", d[i]);
+	return;
+}
+void print(int d[], int n){
+	for(int i=0;i<n;i++)
+		printf("%d ", d[i]);
+	return;
+}
+int main(){
+	int n, d[100001];
+	scanf("%d", &n);
+	for(int i=0;i<n;i++)
+		scanf("%d", &d[i]);
+	heapSort(d, n);
+	print(d, n);
+	return 0;
 }
