@@ -132,4 +132,5 @@ int main()
     hitorder[3] = 0;
     order(0);
     printf("%d", MAX);
+    return 0;
 }
